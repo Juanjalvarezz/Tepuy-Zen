@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Footer from '../components/Footer';
-import Nav from '../components/Nav';
+import Navigate from '../components/Navigate';
 
 const Register = () => {
   const [name, setName] = useState('');
@@ -30,7 +30,7 @@ const Register = () => {
 
   return (
     <>
-    <Nav/>
+    <Navigate/>
 
     <div className="w-4/5 mx-auto ">
     <div className='bg-white p-6 rounded-lg shadow-md max-w-md mx-auto mt-5 mb-5 '>

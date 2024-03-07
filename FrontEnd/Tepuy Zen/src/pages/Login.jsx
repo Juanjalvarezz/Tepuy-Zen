@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Footer from '../components/Footer';
-import Nav from '../components/Nav';
+import Navigate from '../components/Navigate';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -39,7 +39,7 @@ const Login = () => {
 
   return (
     <>
-    <Nav/>
+    <Navigate/>
     <div className="w-4/5 mx-auto ">
     <div className='bg-white p-6 rounded-lg shadow-md max-w-md mx-auto mt-16 mb-16 '>
   <h2 className='title text-2xl text-center text-gray-800 font-semibold mb-4'>Login</h2>

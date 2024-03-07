@@ -1,23 +1,69 @@
-import Logo from "../assets/img/logo.png"
-import { NavLink } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
 
-function Nav() {
+const NavLinks = ({ categories }) => {
+  const handleClick = (category) => {
+    setCategories(categories.map((cat) => (cat === category ? !cat : cat)));
+  };
+
   return (
-    <header className="top-0 flex-wrap z-[20] mx-auto flex w-full items-center justify-between border-b border-gray-500 pr-8 pl-8 bg-[#77BFA3]" style={{ backgroundColor: "#77BFA3" }}>
-      
-      <img src={Logo} className="w-40 -ml-5 -mt-4 -mb-2" alt="Logo"/>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 items-center justify-center text-center gap-3">
-      <NavLink to='/Login' className="navbar-brand">
-        <button className=" amatic-sc-regular text-3xl rounded-full hover:bg-[#98C9A3] hover:text-white hover:shadow-lg hover:rounded-full p-3 transition duration-500" value="Perfil">Login</button>
+    <>
+      {categories.map((category, index) => (
+        <NavLink
+        key={index}
+        to={category.to}
+        onClick={() => handleClick(category)}
+        className={`${category.active ? "text-red-500" : ""} hover:bg-[#98C9A3] hover:text-white hover:shadow-lg hover:rounded-full p-5`}
+      >
+        {category.name}
       </NavLink>
-
-      <NavLink to='/' className="navbar-brand">
-                <button className=" amatic-sc-regular text-3xl rounded-full hover:bg-[#98C9A3] hover:text-white hover:shadow-lg hover:rounded-full p-3 transition duration-500" value="Perfil">Registro</button>
-      </NavLink>
-    </div>
-    </header>
+      ))}
+    </>
   );
-}
+};
+
+const Nav = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const [categories, setCategories] = useState([
+    { name: "Home" , to: "/dashboard", active: false },
+    { name: "Info", to: "/info", active: false },
+    { name: "Guias", to: "/guias", active: false },
+    { name: "Opinion", to: "/opinion", active: false },
+    { name: "Blog", to: "/blog", active: false },
+  ]);
+
+  const toggleNavbar = () => {
+    console.log("toggleNavbar");
+    setIsOpen(!isOpen);
+  };
+
+  const handleClick = (category) => {
+    setCategories(categories.map((cat) => (cat === category ? { ...cat, active: !cat.active } : cat)));
+  };
+
+  return (
+    <>
+      <nav className="flex w-1/3 justify-end">
+        <div className="hidden w-full justify-between md:flex  text-xl">
+          <NavLinks categories={categories} />
+        </div>
+
+        <div className="md:hidden">
+          <button onClick={toggleNavbar}>
+            {isOpen ? <X /> : <Menu />}
+          </button>
+        </div>
+      </nav>
+
+      {isOpen && (
+        <div className="flex basis-full flex-col items-center space-y-4">
+          <NavLinks categories={categories} />
+        </div>
+      )}
+    </>
+  );
+};
 
 export default Nav;
