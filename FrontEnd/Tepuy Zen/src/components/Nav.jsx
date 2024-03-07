@@ -32,6 +32,7 @@ const Nav = () => {
     { name: "Guias", to: "/guias", active: false },
     { name: "Opinion", to: "/opinion", active: false },
     { name: "Blog", to: "/blog", active: false },
+    { name: "LogOut", to: "/login", active: false },
   ]);
 
   const toggleNavbar = () => {
@@ -45,8 +46,8 @@ const Nav = () => {
 
   return (
     <>
-      <nav className="flex w-1/3 justify-end">
-        <div className="hidden w-full justify-between md:flex  text-xl">
+      <nav className="flex w-1.5/4 justify-end">
+        <div className="hidden w-full justify-between md:flex text-xl">
           <NavLinks categories={categories} />
         </div>
 
