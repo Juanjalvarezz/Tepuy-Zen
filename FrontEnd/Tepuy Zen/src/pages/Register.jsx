@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import Footer from '../components/Footer';
 import Navigate from '../components/Navigate';
+import { motion } from 'framer-motion'
 
 const Register = () => {
   const [name, setName] = useState('');
@@ -29,7 +30,7 @@ const Register = () => {
   };
 
   return (
-    <>
+    <motion.div  initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
     <Navigate/>
 
     <div className="w-4/5 mx-auto ">
@@ -88,7 +89,7 @@ const Register = () => {
 
 
     <Footer/>
-    </>
+    </motion.div>
   );
 };
 
