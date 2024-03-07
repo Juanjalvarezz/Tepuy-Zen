@@ -41,7 +41,7 @@ const Login = () => {
     <>
     <Nav/>
     <div className="w-4/5 mx-auto ">
-    <div className='bg-white p-6 rounded-lg shadow-md max-w-md mx-auto mt-5 mb-5 '>
+    <div className='bg-white p-6 rounded-lg shadow-md max-w-md mx-auto mt-16 mb-16 '>
   <h2 className='title text-2xl text-center text-gray-800 font-semibold mb-4'>Login</h2>
       <form onSubmit={handleSubmit}>
       <div className='mb-4 '>

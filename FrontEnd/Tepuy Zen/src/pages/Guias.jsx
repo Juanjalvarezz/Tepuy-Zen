@@ -2,14 +2,14 @@ import React from 'react'
 import Footer from '../components/Footer'
 import Header from './Header'
 
-const Dashboard = () => {
+const Guias = () => {
   return (
     <div>
       <Header/>
-      <h1>Dashboard</h1>
+      <h1>Guias</h1>
       <Footer/>
     </div>
   )
 }
 
-export default Dashboard
+export default Guias
