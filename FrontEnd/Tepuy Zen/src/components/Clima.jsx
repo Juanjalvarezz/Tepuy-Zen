@@ -37,7 +37,7 @@ function Clima() {
 
   return (
     <div className="p-4">
-      <header className="w-4/5 rounded-2xl p-5 mx-auto" style={{ background: '#DDE7C7' }}>
+      <header className="w-4/5 rounded-2xl p-5 mx-auto bg-[#DDE7C7] dark:bg-[#C6D3A9]">
         {/* Boton  */}
         <div className="title flex items-center justify-center">
           <button onClick={searchPressed} className="px-4 py-2 mr-1 tracking-widest text-white rounded-lg animate-bounce" style={{ background: '#77BFA3' }}>

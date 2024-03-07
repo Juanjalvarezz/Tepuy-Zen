@@ -14,7 +14,7 @@ const NavLinks = ({ categories }) => {
         key={index}
         to={category.to}
         onClick={() => handleClick(category)}
-        className={`${category.active ? "text-red-500" : ""} hover:bg-[#98C9A3] hover:text-white hover:shadow-lg hover:rounded-full p-5`}
+        className={`${category.active ? "text-red-500" : ""}  hover:bg-[#98C9A3] hover:text-white hover:shadow-lg hover:rounded-full p-5`}
       >
         {category.name}
       </NavLink>
