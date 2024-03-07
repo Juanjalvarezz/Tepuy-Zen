@@ -3,7 +3,7 @@ import { Route, Routes, useLocation } from 'react-router-dom'
 import Register from '../pages/Register'
 import Login from '../pages/Login'
 import Dashboard from '../pages/Dashboard'
-import AdminPage from '../pages/AdminPage'
+import AdminDashboard from '../pages/AdminDashboard'
 import Info from '../pages/Info'
 import Guias from '../pages/Guias'
 import Opinion from '../pages/Opinion'
@@ -20,7 +20,7 @@ function AnimatedRoutes() {
           <Route path='/' element={<Register/>} />
           <Route path='/login' element={<Login/>} />
           <Route path='/dashboard' element={<Dashboard/>} />
-          <Route path='/adminpage' element={<AdminPage/>} />
+          <Route path='/adminDashboard' element={<AdminDashboard/>} />
           <Route path='/info' element={<Info/>} />
           <Route path='/guias' element={<Guias/>} />
           <Route path='/opinion' element={<Opinion/>} />
