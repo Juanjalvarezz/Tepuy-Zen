@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Footer from '../components/Footer';
+import Nav from '../components/Nav';
 
 const Register = () => {
   const [name, setName] = useState('');
@@ -29,6 +30,8 @@ const Register = () => {
 
   return (
     <>
+    <Nav/>
+
     <div className='text-black'>
       <h1>Register</h1>
       <form onSubmit={handleSubmit}>

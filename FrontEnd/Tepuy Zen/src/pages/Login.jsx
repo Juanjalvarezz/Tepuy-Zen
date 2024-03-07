@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Footer from '../components/Footer';
+import Nav from '../components/Nav';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -38,6 +39,8 @@ const Login = () => {
 
   return (
     <>
+    <Nav/>
+
     <div className='text-black'>
       <h1>Login</h1>
       <form onSubmit={handleSubmit}>
