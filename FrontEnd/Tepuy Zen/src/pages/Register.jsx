@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import Footer from '../components/Footer';
 
 const Register = () => {
   const [name, setName] = useState('');
@@ -27,6 +28,7 @@ const Register = () => {
   };
 
   return (
+    <>
     <div className='text-black'>
       <h1>Register</h1>
       <form onSubmit={handleSubmit}>
@@ -66,6 +68,9 @@ const Register = () => {
         <button type="submit">Register</button>
       </form>
     </div>
+
+    <Footer/>
+    </>
   );
 };
 

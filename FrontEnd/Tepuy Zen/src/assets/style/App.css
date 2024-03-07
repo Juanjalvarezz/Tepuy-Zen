@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Ultra&display=swap');
+
+:root {
+  font-family:Arial, Helvetica, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*Fuentes*/
+.title {
+    font-family: "Ultra", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*Por usar*/
+.amatic-sc-regular {
+  font-family: "Amatic SC", sans-serif;
+  font-weight: bolder;
+  font-style: normal;
+}
+
+.amatic-sc-bold {
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  background-image: url('../img/fondo4.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+
+/*Transiciones*/
+
+.page-enter {
+  opacity: 0;
+}
+
+.page-enter-active {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+
+.page-exit {
+  opacity: 1;
+}
+
+.page-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
+}
