@@ -8,6 +8,7 @@ import Info from '../pages/Info'
 import Guias from '../pages/Guias'
 import Opinion from '../pages/Opinion'
 import Blog from '../pages/Blog'
+import AdminBlog from '../pages/adminBlog'
 
 import { AnimatePresence } from 'framer-motion'
 
@@ -25,6 +26,7 @@ function AnimatedRoutes() {
           <Route path='/guias' element={<Guias/>} />
           <Route path='/opinion' element={<Opinion/>} />
           <Route path='/blog' element={<Blog/>} />
+          <Route path='/adminBlog' element={<AdminBlog/>} />
 
         </Routes>
     </AnimatePresence>

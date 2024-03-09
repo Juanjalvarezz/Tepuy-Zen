@@ -31,7 +31,7 @@ const AdminNav = () => {
     { name: "Info", to: "/adminDashboard", active: false },
     { name: "Guias", to: "/adminDashboard", active: false },
     { name: "Opinion", to: "/adminDashboard", active: false },
-    { name: "Blog", to: "/adminDashboard", active: false },
+    { name: "Blog", to: "/adminBlog", active: false },
     { name: "LogOut", to: "/login", active: false },
   ]);
 

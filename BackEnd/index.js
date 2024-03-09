@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const authRouter = require('./routes/authRoute')
+const authRouter = require('./src/routes/authRoute')
 
 const app = express();
 
@@ -13,10 +13,10 @@ app.use(express.json());
 app.use('/api/auth', authRouter);
 
 //Mongo DB
-mongoose
-.connect('mongodb://localhost:27017/auth')
+mongoose.connect('mongodb://localhost:27017/auth')
 .then(() => console.log('Conectado a la BD'))
 .catch((error) => console.log('Fallo al conectar con MongoDb: ', error));
+
 
 // Global Error
 app.use((err, req, res, next) => {
