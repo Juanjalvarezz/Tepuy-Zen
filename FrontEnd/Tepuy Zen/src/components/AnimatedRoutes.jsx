@@ -9,8 +9,10 @@ import Guias from '../pages/Guias'
 import Opinion from '../pages/Opinion'
 import Blog from '../pages/Blog'
 import AdminBlog from '../pages/adminBlog'
+import AdminOpinion from '../pages/AdminOpinion'
 
 import { AnimatePresence } from 'framer-motion'
+
 
 function AnimatedRoutes() {
     const location = useLocation();
@@ -26,6 +28,7 @@ function AnimatedRoutes() {
           <Route path='/guias' element={<Guias/>} />
           <Route path='/opinion' element={<Opinion/>} />
           <Route path='/blog' element={<Blog/>} />
+          <Route path='/adminOpinions' element={<AdminOpinion/>} />
           <Route path='/adminBlog' element={<AdminBlog/>} />
 
         </Routes>
