@@ -23,15 +23,15 @@ const NavLinks = ({ categories }) => {
   );
 };
 
-const Nav = () => {
+const AdminNav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const [categories, setCategories] = useState([
-    { name: "Home" , to: "/dashboard", active: false },
-    { name: "Info", to: "/info", active: false },
-    { name: "Guias", to: "/guias", active: false },
-    { name: "Opinion", to: "/opinion", active: false },
-    { name: "Blog", to: "/blog", active: false },
+    { name: "Home" , to: "/adminDashboard", active: false },
+    { name: "Info", to: "/adminDashboard", active: false },
+    { name: "Guias", to: "/adminDashboard", active: false },
+    { name: "Opinion", to: "/adminOpinions", active: false },
+    { name: "Blog", to: "/adminBlog", active: false },
     { name: "LogOut", to: "/login", active: false },
   ]);
 
@@ -67,4 +67,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default AdminNav;
