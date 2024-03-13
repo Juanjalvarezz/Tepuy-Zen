@@ -12,6 +12,7 @@ import AdminBlog from '../pages/adminBlog'
 import AdminOpinion from '../pages/AdminOpinion'
 
 import { AnimatePresence } from 'framer-motion'
+import AdminGuias from '../pages/AdminGuias'
 
 
 function AnimatedRoutes() {
@@ -30,6 +31,7 @@ function AnimatedRoutes() {
           <Route path='/blog' element={<Blog/>} />
           <Route path='/adminOpinions' element={<AdminOpinion/>} />
           <Route path='/adminBlog' element={<AdminBlog/>} />
+          <Route path='/adminGuias' element={<AdminGuias/>} />
 
         </Routes>
     </AnimatePresence>
