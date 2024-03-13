@@ -3,6 +3,8 @@ import Footer from '../components/Footer'
 import AdminHeader from '../components/AdminHeader'
 import DarkMode from '../components/DarkMode'
 import { motion } from 'framer-motion'
+import GuiasForm from '../components/GuiasForm'
+import GuiasList from '../components/GuiasList'
 
 function AdminGuias() {
   return (
@@ -10,7 +12,14 @@ function AdminGuias() {
       
     <AdminHeader/>
 
-    <h1>guias</h1>
+    <div className="container mx-auto">
+    <div className="bg-transparent backdrop-blur-md p-5 border-transparent border-2 rounded-lg">
+      <h1 className="title text-3xl text-center font-bold mb-2 text-slate-200 tracking-wider" style={{ color: '#DDE7C7' }}>Guías Turisticos</h1>
+    </div>
+
+    <GuiasForm/>
+    <GuiasList/>
+    </div>
 
 
     <DarkMode/>

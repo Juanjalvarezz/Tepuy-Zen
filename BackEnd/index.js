@@ -6,6 +6,7 @@ const authRouter = require('./src/routes/authRoute')
 const opinionRouter = require('./src/routes/opinionRoute')
 const routes = require('./src/routes/articleRoutes');
 const tipsRouter = require('./src/routes/tipRoute');
+const guiasRouter = require('./src/routes/guiasRoutes');
 
 const app = express();
 
@@ -31,6 +32,7 @@ app.use('/api/auth', authRouter);
 app.use('/opinion', opinionRouter);
 app.use('/api', routes);
 app.use('/api', tipsRouter);
+app.use('/api', guiasRouter);
 
 
 //Mongo DB
