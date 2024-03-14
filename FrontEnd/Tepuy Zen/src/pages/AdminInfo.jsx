@@ -7,6 +7,8 @@ import ServicesForm from '../components/ServicesForm'
 import ServicesList from '../components/ServicesList'
 import HorariosForm from '../components/HorariosForm'
 import HorariosList from '../components/HorariosList'
+import PromosForm from '../components/PromosForm'
+import PromosList from '../components/PromosList'
 
 
 //tipsform
@@ -39,8 +41,8 @@ const AdminInfo = () => {
         <div className="bg-transparent backdrop-blur-md p-5 border-transparent border-2 rounded-lg">
         <h1 className="title text-3xl text-center font-bold mb-2 text-slate-200 tracking-wider" style={{ color: '#DDE7C7' }}>Promos</h1>
         </div>
-
-
+    <PromosForm/>
+    <PromosList/>
     </div>
   </div>
         <DarkMode/>
