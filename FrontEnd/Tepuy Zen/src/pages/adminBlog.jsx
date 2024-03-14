@@ -3,7 +3,9 @@ import Footer from '../components/Footer'
 import AdminHeader from '../components/AdminHeader'
 import DarkMode from '../components/DarkMode'
 import { motion } from 'framer-motion'
-import AdminOpinions from './AdminOpinions'
+import AdminArticles from './AdminArticles'
+import AdminTips from './AdminTips'
+
 
 const Blog = () => {
   return (
@@ -11,8 +13,8 @@ const Blog = () => {
       
       <AdminHeader/>
 
-      <h1>Blog</h1>
-
+      <AdminArticles/>
+      <AdminTips/>
 
       <DarkMode/>
       <Footer/>

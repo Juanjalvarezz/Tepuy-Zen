@@ -57,6 +57,7 @@ const OpinionList = () => {
         <div key={opinion._id} className="shadow-md rounded-lg p-6 mb-3 transform transition hover:scale-110 duration-300" style={{ background: '#DDE7C7' }}>
           {editingOpinionId === opinion._id ? (
             <div>
+              <h1 className='bg-[#77BFA3] text-white font-bold py-2 px-4 rounded mr-2 mb-2 w-fit'>Editando</h1>
               <input
                 type="text"
                 value={editedOpinion.name}
