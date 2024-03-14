@@ -9,6 +9,6 @@ const opinionSchema = new mongoose.Schema({
   imagen: String 
 });
 
-const Opinion = mongoose.model('guias', opinionSchema);
+const Guias = mongoose.model('guias', opinionSchema);
 
-module.exports = Opinion;
+module.exports = Guias;

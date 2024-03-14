@@ -54,6 +54,7 @@ const TipsList = () => {
   <div key={tip._id} className="p-5 rounded-xl mb-3 flex flex-col items-center justify-center transform transition hover:scale-110 duration-300" style={{ background: '#BFD8BD', minWidth: 0 }}>
     {editingTipId === tip._id ? (
       <div className="flex flex-col items-center">
+        <h1 className='bg-[#77BFA3] text-white font-bold py-2 px-4 rounded mr-2 mb-2'>Editando</h1>
         <input
           type="text"
           value={editedTip.name}

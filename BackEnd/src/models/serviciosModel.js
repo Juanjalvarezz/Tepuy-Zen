@@ -2,11 +2,10 @@ const mongoose = require('mongoose');
 
 const opinionSchema = new mongoose.Schema({
   name: String, 
-  price: Number, 
-  importance: Number, 
+  description: String, 
   imagen: String 
 });
 
-const Article = mongoose.model('artic', opinionSchema);
+const Servicios = mongoose.model('services', opinionSchema);
 
-module.exports = Article;
+module.exports = Servicios;
