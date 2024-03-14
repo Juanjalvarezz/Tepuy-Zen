@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const opinionSchema = new mongoose.Schema({
+const guiasSchema = new mongoose.Schema({
   name: String, 
   age: Number, //price
   experience: Number, //importance
@@ -9,6 +9,6 @@ const opinionSchema = new mongoose.Schema({
   imagen: String 
 });
 
-const Guias = mongoose.model('guias', opinionSchema);
+const Guias = mongoose.model('guias', guiasSchema);
 
 module.exports = Guias;

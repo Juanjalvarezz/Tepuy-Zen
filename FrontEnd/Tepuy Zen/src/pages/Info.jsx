@@ -5,6 +5,7 @@ import Slider2 from "../components/Slider2"
 import DarkMode from '../components/DarkMode'
 import { motion } from 'framer-motion'
 import UserServices from '../components/UserServices'
+import UserHorarios from '../components/UserHorarios'
 
 const Info = () => {
   return (
@@ -19,6 +20,10 @@ const Info = () => {
       </div>
       <UserServices/>
 
+      <div className="bg-transparent backdrop-blur-md p-5 border-transparent border-2 rounded-lg mb-4 text-center mt-2 w-fit mx-auto">
+          <h1 className="title text-3xl font-bold mb-2 text-slate-200 tracking-wider" style={{ color: '#DDE7C7' }}>Horarios</h1>
+      </div>
+      <UserHorarios/>
 
       </section>
 

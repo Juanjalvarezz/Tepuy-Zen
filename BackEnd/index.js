@@ -8,7 +8,7 @@ const routes = require('./src/routes/articleRoutes');
 const tipsRouter = require('./src/routes/tipRoute');
 const guiasRouter = require('./src/routes/guiasRoutes');
 const serviciosRouter = require('./src/routes/serviciosRouter');
-
+const horariosRouter = require('./src/routes/horariosRoutes');
 
 const app = express();
 
@@ -36,6 +36,7 @@ app.use('/api', routes);
 app.use('/api', tipsRouter);
 app.use('/api', guiasRouter);
 app.use('/api', serviciosRouter);
+app.use('/api', horariosRouter);
 
 
 //Mongo DB

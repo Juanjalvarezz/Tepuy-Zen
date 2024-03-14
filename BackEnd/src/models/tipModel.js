@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
 
-const opinionSchema = new mongoose.Schema({
+const tipsSchema = new mongoose.Schema({
   name: String, 
   description: String, 
   imagen: String 
 });
 
-const Tips = mongoose.model('tips', opinionSchema);
+const Tips = mongoose.model('tips', tipsSchema);
 
 module.exports = Tips;

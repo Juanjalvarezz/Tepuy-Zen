@@ -5,6 +5,8 @@ import DarkMode from '../components/DarkMode'
 import { motion } from 'framer-motion'
 import ServicesForm from '../components/ServicesForm'
 import ServicesList from '../components/ServicesList'
+import HorariosForm from '../components/HorariosForm'
+import HorariosList from '../components/HorariosList'
 
 
 //tipsform
@@ -28,8 +30,8 @@ const AdminInfo = () => {
     <div className="bg-transparent backdrop-blur-md p-5 border-transparent border-2 rounded-lg">
     <h1 className="title text-3xl text-center font-bold mb-2 text-slate-200 tracking-wider" style={{ color: '#DDE7C7' }}>Horarios</h1>
     </div>
-
-
+    <HorariosForm/>
+    <HorariosList/>
     </div>
 
 
