@@ -53,22 +53,26 @@ const UserHabitaciones = () => {
     <>
       <section alt="Lista de habitaciones" className="w-4/5 mx-auto mt-5">
         {/* Input para buscar habitaciones */}
-        <div className="w-full mb-4">
-          <input
-            type="text"
-            value={filtroHuespedes}
-            onChange={handleBuscarHabitaciones}
-            placeholder="Filtrar por número de huéspedes"
-            className="w-full px-4 py-2 border rounded"
-          />
-        </div>
+        <div className='bg-[#98C9A3] py-3 mb-3 rounded-3xl lg:w-3/5 mx-auto'>
+  <div className="items-center justify-center mb-4 mx-auto lg:w-3/5">
+    <input
+      type="text"
+      value={filtroHuespedes}
+      onChange={handleBuscarHabitaciones}
+      placeholder="Filtrar por huéspedes 🔎"
+      className="w-full py-2 border rounded-full mt-3 text-center"
+    />
+  </div>
+</div>
+
         
           {/* Loader */}
           {mostrarLoader && (
-            <div className="flex justify-center items-center h-24">
-              <div className="loader ease-linear rounded-full border-8 border-t-8 border-gray-200 h-12 w-12"></div>
-            </div>
-          )}
+  <div className="flex justify-center items-center h-24">
+    <div className="animate-spin rounded-full border-8 border-t-8 border-[#77BFA3] h-12 w-12 shadow-xl"></div>
+  </div>
+)}
+
           
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-3">
           {/* Lista de habitaciones filtradas */}
@@ -109,7 +113,7 @@ const UserHabitaciones = () => {
 
       {/* Mensaje de no habitaciones */}
       {habitacionesFiltradas.length === 0 && !mostrarLoader && (
-        <div className="w-fit mx-auto mt-2 p-5 amatic-sc-bold text-3xl rounded-xl text-center text-red-500 bg-[#EDEEC9] mb-2">{noHabitacionesMensaje}</div>
+        <div className="w-4/5 mx-auto mt-2 p-5 amatic-sc-bold text-3xl rounded-xl text-center text-red-500 bg-[#EDEEC9] mb-2">{noHabitacionesMensaje}</div>
       )}
     </>
   );
