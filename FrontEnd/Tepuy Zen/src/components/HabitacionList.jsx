@@ -4,7 +4,7 @@ import axios from 'axios';
 const HabitacionesList = () => {
   const [habitaciones, setHabitaciones] = useState([]);
   const [editingHabitacionId, setEditingHabitacionId] = useState(null);
-  const [editedHabitacion, setEditedHabitacion] = useState({ name: '', price1: '', price2: '', huespedes: '', espacio: '', servicios: '', noServicios: '', imagen: '' });
+  const [editedHabitacion, setEditedHabitacion] = useState({ name: '', price1: '', price2: '', huespedes: '', stars: '', espacio: '', descripcion: '', servicios: '', noServicios: '', imagen: '' });
 
   useEffect(() => {
     const fetchHabitaciones = async () => {
@@ -31,7 +31,7 @@ const HabitacionesList = () => {
         habitacion._id === editingHabitacionId ? { ...habitacion, ...editedHabitacion } : habitacion
       ));
       setEditingHabitacionId(null);
-      setEditedHabitacion({ name: '', price1: '', price2: '', huespedes: '', espacio: '', servicios: '', noServicios: '', imagen: '' });
+      setEditedHabitacion({ name: '', price1: '', price2: '', huespedes: '', espacio: '', stars: '', descripcion: '', servicios: '', noServicios: '', imagen: '' });
     } catch (error) {
       console.error('Error updating habitacion:', error);
     }
@@ -91,6 +91,22 @@ const HabitacionesList = () => {
               placeholder="Espacio"
             />
             <input
+                type="text"
+                value={editedHabitacion.stars}
+                onChange={e => setEditedTip({ ...editedHabitacion, stars: e.target.value })}
+                className="mb-2 px-2 py-1 border rounded w-full"
+                placeholder="Estrellas"
+                max={5}
+              />
+               <textarea
+                type="text"
+                value={editedHabitacion.descripcion}
+                onChange={e => setEditedTip({ ...editedHabitacion, descripcion: e.target.value })}
+                className="mb-2 px-2 py-1 border rounded w-full h-36"
+                placeholder="Estrellas"
+                max={5}
+              />
+            <input
               type="text"
               value={editedHabitacion.servicios}
               onChange={e => setEditedHabitacion({ ...editedHabitacion, servicios: e.target.value })}
@@ -114,17 +130,19 @@ const HabitacionesList = () => {
             <div className='text-center'>
               <h3 className="title tracking-wider text-2xl font-bold mb-2 mt-2 bg-[#77BFA3] text-white  py-2 px-4 rounded-xl w-fit mx-auto ">{habitacion.name}</h3>
               
-              <div className='amatic-sc-bold text-2xl bg-[#EDEEC9] p-2 rounded-xl '>
+              <div className='bg-[#EDEEC9] p-2 rounded-xl '>
                 <div className='text-center'>
-                <p className=" mb-1">Número de huespedes:{habitacion.huespedes}</p>
-                <p className=" mb-1"> Tamaño de la habitación: {habitacion.espacio}</p>
-                <p className=" mb-1"> Servicios Incluidos: {habitacion.servicios}</p>
-                <p className=" mb-1"> Servicios NO Incluidos: {habitacion.noServicios}</p>
+                <p className="amatic-sc-bold text-xl mb-5"> {habitacion.descripcion}</p>
+                <p className="amatic-sc-bold text-2xl mb-1">Número de huespedes:{habitacion.huespedes}</p>
+                <p className="amatic-sc-bold text-2xl mb-1"> Tamaño de la habitación: {habitacion.espacio}</p>
+                <p className="amatic-sc-bold text-2xl mb-1"> Servicios Incluidos: {habitacion.servicios}</p>
+                <p className="amatic-sc-bold text-2xl mb-1"> Servicios NO Incluidos: {habitacion.noServicios}</p>
+                <p className="amatic-sc-bold text-2xl mb-1">Evaluación: {habitacion.stars} ⭐</p>
                 </div>
 
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-3 mt-4 bg-[#98C9A3] -m-2 rounded-bl-xl rounded-br-xl'>
-                <p className=" mb-1">Weekday: {habitacion.price1}$ / Noche</p>
-                <p className=" mb-1">Week-End: {habitacion.price2}$ / Noche</p>
+                <p className="amatic-sc-bold text-2xl mb-1">Weekday: {habitacion.price1}$ / Noche</p>
+                <p className="amatic-sc-bold text-2xl mb-1">Week-End: {habitacion.price2}$ / Noche</p>
               </div>
 
               </div>

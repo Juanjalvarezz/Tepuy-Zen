@@ -2,8 +2,8 @@ const Habitaciones = require('../models/HabitacionesModel');
 
 exports.createHabitacion = async (req, res) => {
   try {
-    const { name, price1, price2, huespedes, espacio, servicios, noServicios, descripcion, imagen} = req.body;
-    const newHabitacion = new Habitaciones({ name, price1, price2, huespedes, espacio, servicios, noServicios, descripcion, imagen });
+    const { name, price1, price2, huespedes, espacio, servicios, noServicios, descripcion, stars, imagen} = req.body;
+    const newHabitacion = new Habitaciones({ name, price1, price2, huespedes, espacio, servicios, noServicios, descripcion, stars, imagen });
     await newHabitacion.save();
     res.status(201).send(newHabitacion);
   } catch (error) {
@@ -34,8 +34,8 @@ exports.getHabitacionById = async (req, res) => {
 
 exports.updateHabitacion = async (req, res) => {
   try {
-    const { name, price1, price2, huespedes, espacio, servicios, noServicios, descripcion, imagen } = req.body;
-    const habitacion = await Habitaciones.findByIdAndUpdate(req.params.id, { name, price1, price2, huespedes, espacio, servicios, noServicios, descripcion, imagen}, { new: true });
+    const { name, price1, price2, huespedes, espacio, servicios, noServicios, descripcion, stars, imagen } = req.body;
+    const habitacion = await Habitaciones.findByIdAndUpdate(req.params.id, { name, price1, price2, huespedes, espacio, servicios, noServicios, descripcion, stars, imagen}, { new: true });
     if (!habitacion) {
       return res.status(404).send();
     }

@@ -11,6 +11,7 @@ const HabitacionesForm = () => {
     espacio: '',
     servicios: '',
     noServicios: '',
+    stars: 0,
     imagen: null,
   };
 
@@ -111,7 +112,14 @@ const HabitacionesForm = () => {
       className="p-2 border rounded-lg"
       required // Campo requerido
     />
-
+    <input
+          type="number"
+          placeholder="Estrellas"
+          name="stars"
+          value={formData.stars || ''}
+          onChange={handleChange}
+          className="w-full p-2 border  rounded-lg md:col-span-2"
+        />
     <input
       type="text"
       placeholder="Tamaño de la habitación"
@@ -148,6 +156,7 @@ const HabitacionesForm = () => {
       className="p-2 border rounded-lg md:col-span-2"
       required // Campo requerido
     />
+
     <h1 className='md:col-span-2 text-center'>Agrega una Imagen para mostrar la Habitación :</h1>
     <input type="file" className="p-2 border rounded w-full bg-white text-gray-700 hover:bg-gray-300 focus:outline-none focus:bg-white md:col-span-2" name="imagen" onChange={handleImageChange} required />
 

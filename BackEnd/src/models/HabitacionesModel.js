@@ -9,6 +9,7 @@ const HabitacionesSchema = new mongoose.Schema({
     espacio: String, //Tamano
     servicios: String,
     noServicios: String,
+    stars: Number,
     imagen: String, //imagen
 });
 
