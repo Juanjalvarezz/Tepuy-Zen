@@ -90,7 +90,8 @@ const ServicesForm = () => {
         />
 
           <div className="mb-3">
-            <input type="file" className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="imagen" onChange={handleImageChange} required />
+          <h1 className='md:col-span-2 text-center -mt-2 mb-1'>Agrega una Imagen para mostrar los Servicios:</h1>
+            <input type="file" className="p-2 border rounded w-full bg-white text-gray-700 hover:bg-gray-300 focus:outline-none focus:bg-white md:col-span-2" name="imagen" onChange={handleImageChange} required />
           </div>
 
 

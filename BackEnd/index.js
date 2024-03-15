@@ -10,6 +10,7 @@ const guiasRouter = require('./src/routes/guiasRoutes');
 const serviciosRouter = require('./src/routes/serviciosRouter');
 const horariosRouter = require('./src/routes/horariosRoutes');
 const promosRouter = require('./src/routes/promosRoutes');
+const habitacionesRouter = require('./src/routes/HabitacionesRoutes');
 
 const app = express();
 
@@ -39,6 +40,7 @@ app.use('/api', guiasRouter);
 app.use('/api', serviciosRouter);
 app.use('/api', horariosRouter);
 app.use('/api', promosRouter);
+app.use('/api', habitacionesRouter);
 
 
 //Mongo DB
