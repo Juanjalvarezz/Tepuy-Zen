@@ -10,6 +10,11 @@ const guiasRouter = require('./src/routes/guiasRoutes');
 const serviciosRouter = require('./src/routes/serviciosRouter');
 const horariosRouter = require('./src/routes/horariosRoutes');
 const promosRouter = require('./src/routes/promosRoutes');
+const habitacionesRouter = require('./src/routes/HabitacionesRoutes');
+const reviewRouter = require('./src/routes/reviewRoutes');
+const { sendEmail } = require('./src/mailer');
+const reservaRoutes = require('./src/routes/reservaRoutes')
+
 
 const app = express();
 
@@ -30,6 +35,14 @@ app.use((err, req, res, next) => {
   }
 });
 
+//Metodo para enviar correos
+app.post('/api/send-email', (req, res) => {
+  const { nombre, apellido, fechaEntrada, fechaSalida, correo } = req.body;
+  const data = { nombre, apellido, fechaEntrada, fechaSalida, correo };
+  sendEmail(data);
+  res.send('Email enviado');
+});
+
 //Rutas
 app.use('/api/auth', authRouter);
 app.use('/opinion', opinionRouter);
@@ -39,7 +52,9 @@ app.use('/api', guiasRouter);
 app.use('/api', serviciosRouter);
 app.use('/api', horariosRouter);
 app.use('/api', promosRouter);
-
+app.use('/api', habitacionesRouter);
+app.use('/api', reviewRouter);
+app.use('/api/reservas', reservaRoutes);
 
 //Mongo DB
 mongoose.connect('mongodb://localhost:27017/auth')
