@@ -11,14 +11,15 @@ Bienvenido al repositorio que alberga el código fuente de la página web del Ho
 - [Créditos](#créditos)
 
 ## Tecnologías
-- React: Biblioteca de JavaScript para la creación de interfaces de usuario interactivas. 
-- Vite: Herramienta de desarrollo rápido para proyectos basados en JavaScript.
-- React Router: Biblioteca para gestionar la navegación y las rutas en aplicaciones React.
-- Node.js: Entorno de ejecución de JavaScript en el servidor.
-- Express: Framework web minimalista para Node.js.
-- Tailwind CSS: Framework de CSS para agilizar el diseño de la página web.
-- Axios: Biblioteca para realizar solicitudes HTTP desde el cliente.
-- Nodemailer: Módulo de Node.js para el envío de correos electrónicos de manera sencilla y eficiente.
+- React: Biblioteca de JavaScript para la creación de interfaces de usuario interactivas. Documentacion: https://legacy.reactjs.org/docs/getting-started.html
+- Vite: Herramienta de desarrollo rápido para proyectos basados en JavaScript. Documentacion: https://vitejs.dev/guide/
+- React Router: Biblioteca para gestionar la navegación y las rutas en aplicaciones React. Documentacion: https://reactrouter.com/en/main
+- Node.js: Entorno de ejecución de JavaScript en el servidor. Documentacion: https://nodejs.org/docs/latest/api/
+- Express: Framework web minimalista para Node.js. Documentacion: https://expressjs.com/
+- Tailwind CSS: Framework de CSS para agilizar el diseño de la página web. Documentacion: https://v2.tailwindcss.com/docs
+- Axios: Biblioteca para realizar solicitudes HTTP desde el cliente. Documentacion: https://axios-http.com/docs/intro
+- Nodemailer: Módulo de Node.js para el envío de correos electrónicos de manera sencilla y eficiente. Documentacion: https://www.nodemailer.com/
+- JWT (JSON Web Tokens): Estándar abierto que define una forma compacta y autónoma de transmitir de forma segura la información entre las partes como un objeto JSON. Documentacion: https://jwt.io/introduction
 
 ## Instalación
 1. Abre tu terminal.
