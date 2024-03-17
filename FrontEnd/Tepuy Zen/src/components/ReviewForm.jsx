@@ -49,7 +49,7 @@ const ReviewForm = () => {
         required // Campo requerido
       />
       <textarea
-        placeholder="Opinión"
+        placeholder="Review"
         name="opinion"
         value={formData.opinion}
         onChange={handleChange}
