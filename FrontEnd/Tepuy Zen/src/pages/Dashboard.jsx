@@ -6,6 +6,7 @@ import Clima from '../components/Clima'
 import DarkMode from '../components/DarkMode'
 import { motion } from 'framer-motion'
 import UserHabitaciones from '../components/UserHabitacion'
+import UserReview from '../components/UserReview'
 
 //background: '#98C9A3'
 const Dashboard = () => {
@@ -15,14 +16,23 @@ const Dashboard = () => {
       <Slider/>
       <Clima/>
 
-      <section alt="Guias Turisticos" className="w-4/5 mx-auto mt-5 flex justify-center">
-      <div className="bg-transparent backdrop-blur-md p-5 border-transparent border-2 rounded-lg mb-4 w-fit">
-        <h1 className="title text-3xl font-bold mb-2 text-slate-200 tracking-wider" style={{ color: '#DDE7C7' }}>Habitaciones disponibles</h1>
+      <section alt="Guias Turisticos" className="w-4/5 mx-auto mt-2 flex justify-center">
+      <div className="bg-transparent backdrop-blur-md p-5 border-transparent border-2 rounded-lg mb-2 w-fit">
+        <h1 className="title text-3xl font-bold  text-slate-200 tracking-wider" style={{ color: '#DDE7C7' }}>Habitaciones disponibles</h1>
       </div>
      </section>
-
-      <UserHabitaciones/>
       
+      <UserHabitaciones/>
+
+      <section alt="Guias Turisticos" className="w-4/5 mx-auto mt-2 flex justify-center">
+      <div className="bg-transparent backdrop-blur-md p-5 border-transparent border-2 rounded-lg mb-2 w-fit">
+        <h1 className="title text-3xl font-bold text-slate-200 tracking-wider" style={{ color: '#DDE7C7' }}>Reviews de Habitaciones</h1>
+      </div>
+     </section>
+      
+
+      <UserReview/>
+
       <DarkMode/>
       <Footer/>
     </motion.div>

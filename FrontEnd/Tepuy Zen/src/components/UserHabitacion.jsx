@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import axios from 'axios';
 
 const UserHabitaciones = () => {
@@ -68,11 +69,10 @@ const UserHabitaciones = () => {
         
           {/* Loader */}
           {mostrarLoader && (
-  <div className="flex justify-center items-center h-24">
-    <div className="animate-spin rounded-full border-8 border-t-8 border-[#77BFA3] h-12 w-12 shadow-xl"></div>
-  </div>
-)}
-
+            <div className="flex justify-center items-center h-24">
+              <div className="animate-spin rounded-full border-8 border-t-8 border-[#77BFA3] h-12 w-12 shadow-xl"></div>
+            </div>
+          )}
           
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-3">
           {/* Lista de habitaciones filtradas */}
@@ -80,7 +80,7 @@ const UserHabitaciones = () => {
             <>
               {habitacionesFiltradas.length > 0 ? (
                 habitacionesFiltradas.map(habitacion => (
-                  <div key={habitacion._id} className="p-5 rounded-xl mb-3 flex flex-col items-center justify-center transform transition hover:scale-110 duration-300" style={{ background: '#BFD8BD', width: '100%' }}>
+                  <div key={habitacion._id} className="p-5 rounded-xl mb-3 flex flex-col items-center justify-center transform transition hover:scale-105 duration-300" style={{ background: '#BFD8BD', width: '100%' }}>
                     <div className="flex flex-col items-center">
                       <img src={habitacion.imagen} alt="Imagen de la habitacion" className="w-96 h-auto object-cover" />
                       <div className='text-center'>
@@ -100,7 +100,13 @@ const UserHabitaciones = () => {
                             <p className=" mb-1">Weekday: {habitacion.price1}$ / Noche</p>
                             <p className=" mb-1">Week-End: {habitacion.price2}$ / Noche</p>
                           </div>
-                        </div>
+                          </div>
+
+                              <NavLink to='/reviewReserve' className="flex justify-center mt-3 amatic-sc-regular text-2xl">
+                                <button className="bg-[#77BFA3] text-white px-4 py-2 rounded-2xl ">
+                                  Hacer una reserva o dejar una review
+                                </button>
+                              </NavLink>
                       </div>
                     </div>
                   </div>

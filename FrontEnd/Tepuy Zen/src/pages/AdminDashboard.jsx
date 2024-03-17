@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import AdminHeader from '../components/AdminHeader'
 import HabitacionesForm from '../components/HabitacionForm'
 import HabitacionesList from '../components/HabitacionList'
+import ReviewList from '../components/ReviewList'
 
 const AdminDashboard = () => {
   return (
@@ -17,6 +18,13 @@ const AdminDashboard = () => {
         </div>
       <HabitacionesForm/>
       <HabitacionesList/>
+      </div>
+
+      <div className="container mx-auto">
+        <div className="bg-transparent backdrop-blur-md p-5 border-transparent border-2 rounded-lg">
+        <h1 className="title text-3xl text-center font-bold mb-2 text-slate-200 tracking-wider" style={{ color: '#DDE7C7' }}>Reviews de Habitaciones</h1>
+        </div>
+      <ReviewList/>
       </div>
       
 
