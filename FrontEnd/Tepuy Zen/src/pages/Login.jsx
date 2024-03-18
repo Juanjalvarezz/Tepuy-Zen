@@ -26,7 +26,7 @@ const Login = () => {
         if (userRole === 'user') {
           window.location.href = '/dashboard';
         } else if (userRole === 'admin') {
-          window.location.href = '/adminpage';
+          window.location.href = '/adminDashboard';
         } else {
           // Handle other roles if necessary
         }
